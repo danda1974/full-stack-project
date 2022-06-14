@@ -34,21 +34,24 @@ Specifications
 Setup
 - Make a folder called “full-stack-project”
 - Inside you should have 2 sub folders/apps
-- a React app
-- a SprintBoot app
+  - a React app
+  - a SprintBoot app
+
 Safety
 - You are fine to commit your week in the beginning, however remember that once you get
 onto your database connection you need to abstract out your password(s) into a file that
 isn't git tracked
 - No context related to the bank
-- Ids
-- Emails
-- Titles
-- etc
+  - Ids
+  - Emails
+  - Titles
+  - etc
+
 Data Structure
 - I would advise you to think of your data structure first, think....
-- What should a student/user have (name, email, interestedIn etc)
-- What should a course have(name, category, completionTime, price, syllabus,
+  - What should a student/user have (name, email, interestedIn etc)
+  - What should a course have(name, category, completionTime, price, syllabus,
 author etc)
-- You can use something like MURAL to plan out your structure
+  - You can use something like MURAL to plan out your structure
+  
 We’ll review how everyone is progressing with this challenge, but for now....Good luck!
