@@ -8,6 +8,7 @@ full-stack web application which combines these technologies. The application ne
 to CRUD a particular database and will be based on a course and students structure 😊
 
 Steps
+
 #1 Build your new react frontend
 In our example, we’ll use ‘courses’ as our resource we’re going to CRUD. Start by running 'npx
 create-react-app courseology-frontend' to generate a new react project. Start by creating a home page to show courses fetched via GET /courses
@@ -53,5 +54,5 @@ Data Structure
   - What should a course have(name, category, completionTime, price, syllabus,
 author etc)
   - You can use something like MURAL to plan out your structure
-  
+
 We’ll review how everyone is progressing with this challenge, but for now....Good luck!
