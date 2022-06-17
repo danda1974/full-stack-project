@@ -1,4 +1,4 @@
-
+@use "../../assets/sass/variables" as *;
 
 .searchBox {
   display: flex;
@@ -6,12 +6,13 @@
   align-items: center;
 
   .searchCourse {
-    color: rgb(45, 13, 80);
+    color: $color-violet;
   }
-  
+
   input {
-    background-color: rgb(206, 198, 198);
-    border: 2px solid rgb(206, 198, 198);padding: 8px 8px;
+    background-color: $color-grey;
+    border: 2px solid $color-grey;
+    padding: 8px 8px;
 
     &::placeholder {
       color: black;
