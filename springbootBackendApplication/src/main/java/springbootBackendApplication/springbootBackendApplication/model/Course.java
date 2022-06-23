@@ -1,10 +1,21 @@
 package springbootBackendApplication.springbootBackendApplication.model;
 
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Course {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String name;
-    private int startDate;
-    private String startTime;
+    private String startdate;
+    private String starttime;
     private String duration;
     private String location;
     private String summary;
@@ -13,11 +24,13 @@ public class Course {
     private String syllabus;
     private String teacher;
 
-    public Course(int id, String name, int startDate, String startTime, String duration, String location, String summary, String price, String category, String syllabus, String teacher) {
-        this.id = id;
+    public Course() {
+    }
+
+    public Course(String name, String startdate, String starttime, String duration, String location, String summary, String price, String category, String syllabus, String teacher) {
         this.name = name;
-        this.startDate = startDate;
-        this.startTime = startTime;
+        this.startdate = startdate;
+        this.starttime = starttime;
         this.duration = duration;
         this.location = location;
         this.summary = summary;
@@ -27,31 +40,11 @@ public class Course {
         this.teacher = teacher;
     }
 
-    public Course() {
-    }
-
-    @Override
-    public String toString() {
-        return "Course{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", startDate=" + startDate +
-                ", startTime='" + startTime + '\'' +
-                ", duration='" + duration + '\'' +
-                ", location='" + location + '\'' +
-                ", summary='" + summary + '\'' +
-                ", price='" + price + '\'' +
-                ", category='" + category + '\'' +
-                ", syllabus='" + syllabus + '\'' +
-                ", teacher='" + teacher + '\'' +
-                '}';
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -63,20 +56,20 @@ public class Course {
         this.name = name;
     }
 
-    public int getStartDate() {
-        return startDate;
+    public String getStartdate() {
+        return startdate;
     }
 
-    public void setStartDate(int startDate) {
-        this.startDate = startDate;
+    public void setStartdate(String startdate) {
+        this.startdate = startdate;
     }
 
-    public String getStartTime() {
-        return startTime;
+    public String getStarttime() {
+        return starttime;
     }
 
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
+    public void setStarttime(String starttime) {
+        this.starttime = starttime;
     }
 
     public String getDuration() {
@@ -135,3 +128,21 @@ public class Course {
         this.teacher = teacher;
     }
 }
+
+//Ich brauche die toString Methode nicht mehr, da ich mit @RestController arbeite. Dies war nur ein Zwischenschritt, falls ich die Ausgabe in der Konsole sehen will.
+//@Override
+//public String toString() {
+//    return "Course{" +
+//            "id='" + id + '\'' +
+//            ", name='" + name + '\'' +
+//            ", startDate=" + startDate +
+//            ", startTime='" + startTime + '\'' +
+//            ", duration='" + duration + '\'' +
+//            ", location='" + location + '\'' +
+//            ", summary='" + summary + '\'' +
+//            ", price='" + price + '\'' +
+//            ", category='" + category + '\'' +
+//            ", syllabus='" + syllabus + '\'' +
+//            ", teacher='" + teacher + '\'' +
+//            '}';
+//}
