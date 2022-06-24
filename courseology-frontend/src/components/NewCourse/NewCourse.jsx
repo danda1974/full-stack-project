@@ -29,8 +29,8 @@ const NewCourse = () => {
 
   return (
     <div>
+      <h3 className="headline">Add your course</h3>
       <div className="new-course-card">
-        <h3>Add your course</h3>
         <div className="course-details__info">
           <h4>Name: </h4>
           <input

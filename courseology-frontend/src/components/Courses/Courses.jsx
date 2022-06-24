@@ -64,7 +64,7 @@ const Courses = () => {
                   openSelectedCourseCard(course.id);
                 }}
               >
-                <h4>{course.name}</h4>
+                <h4 className="courseName">{course.name}</h4>
                 <img
                   width="50px"
                   src={
