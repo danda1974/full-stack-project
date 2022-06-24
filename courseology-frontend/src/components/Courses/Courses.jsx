@@ -4,8 +4,11 @@ import inpersonImage from "../../assets/images/inperson_course_logo.png";
 import selfpacedImage from "../../assets/images/self-paced_e-learning_logo.png";
 import SearchBar from "../SearchBar/SearchBar";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Courses = () => {
+  const navigator = useNavigate();
+
   useEffect(() => {
     getCourses();
   }, []);
@@ -39,6 +42,10 @@ const Courses = () => {
     setAllCourses(data);
   };
 
+  const openSelectedCourseCard = (courseId) => {
+    navigator("/course/" + courseId);
+  };
+
   return (
     <>
       <SearchBar handleInput={handleInput} />
@@ -47,7 +54,12 @@ const Courses = () => {
         <div className="coursesSelection">
           {courses.map((course, index) => {
             return (
-              <div className="courseCard">
+              <div
+                className="courseCard"
+                onClick={() => {
+                  openSelectedCourseCard(course.id);
+                }}
+              >
                 <h4>{course.name}</h4>
                 <img
                   width="50px"
@@ -58,6 +70,7 @@ const Courses = () => {
                       ? inpersonImage
                       : selfpacedImage
                   }
+                  alt={course.location}
                 ></img>
                 <p>{course.summary}</p>
                 <p>* Start Date: {course.startdate}</p>

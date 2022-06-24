@@ -6,6 +6,7 @@ import springbootBackendApplication.springbootBackendApplication.model.Course;
 import springbootBackendApplication.springbootBackendApplication.repository.CourseRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -18,6 +19,16 @@ public class CourseController {
     @GetMapping("/courses")
     public List<Course> getCourses() {
         return coursesRepo.findAll();
+    }
+
+    @GetMapping("/courses/{id}")
+    public Course getCourse(@PathVariable Integer id) {
+        Optional<Course> optionalCourse = coursesRepo.findById(id);
+        Course selectedCourse = null;
+        if (optionalCourse.isPresent()) {
+            selectedCourse = optionalCourse.get();
+        }
+        return selectedCourse;
     }
 
     @PostMapping("/course")
