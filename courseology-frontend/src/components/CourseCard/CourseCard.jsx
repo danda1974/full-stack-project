@@ -30,28 +30,107 @@ const CourseCard = () => {
 
   return (
     <div className="course-selection">
-      <h2>{course.name}</h2>
+      <h2 className="course-title">{course.name}</h2>
+
       <div className="course-card">
-        <p>Syllabus: {course.syllabus}</p>
-        <p>Category: {course.category}</p>
-        <img
-          width="50px"
-          src={
-            course.location === "online"
-              ? onlineImage
-              : course.location === "in person"
-              ? inpersonImage
-              : selfpacedImage
-          }
-          alt={course.location}
-        ></img>
-        <p>Start Date: {course.startdate}</p>
-        <p>Start Time: {course.starttime}</p>
-        <p>Duration: {course.duration}</p>
-        <p>Location: {course.location}</p>
-        <p>{course.summary}</p>
-        <p>Price: {course.price}</p>
-        <p>Teacher: {course.teacher}</p>
+        <div className="course-details__info">
+          <h4>Syllabus: </h4>
+          <textarea
+            rows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.syllabus}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Category: </h4>{" "}
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.category}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Start Date: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.startdate}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Start Time: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.starttime}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Duration: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.duration}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Location: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.location}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Summary: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.summary}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Price: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.price}
+          ></textarea>
+        </div>
+
+        <div className="course-details__info">
+          <h4>Teacher: </h4>
+          <textarea
+            ows="2"
+            cols="35"
+            disabled="disabled"
+            id={id}
+            value={course.teacher}
+          ></textarea>
+        </div>
       </div>
       <button className="backButton" onClick={returnToSearch}>
         Back to Search
