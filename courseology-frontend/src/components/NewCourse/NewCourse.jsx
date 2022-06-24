@@ -31,8 +31,8 @@ const NewCourse = () => {
     <div>
       <div className="new-course-card">
         <h3>Add your course</h3>
-        <p>
-          Name:{" "}
+        <div className="course-details__info">
+          <h4>Name: </h4>
           <input
             type="text"
             value={course.name}
@@ -40,9 +40,10 @@ const NewCourse = () => {
               handleInput("name", e);
             }}
           ></input>
-        </p>
-        <p>
-          Syllabus:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Syllabus: </h4>
           <input
             type="text"
             value={course.syllabus}
@@ -50,9 +51,10 @@ const NewCourse = () => {
               handleInput("syllabus", e);
             }}
           ></input>
-        </p>
-        <p>
-          Category:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Category: </h4>
           <input
             type="text"
             value={course.category}
@@ -60,9 +62,10 @@ const NewCourse = () => {
               handleInput("category", e);
             }}
           ></input>
-        </p>
-        <p>
-          Start Date:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Start Date: </h4>
           <input
             type="text"
             value={course.startdate}
@@ -70,9 +73,10 @@ const NewCourse = () => {
               handleInput("startdate", e);
             }}
           ></input>
-        </p>
-        <p>
-          Start Time:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Start Time: </h4>
           <input
             type="text"
             value={course.starttime}
@@ -80,9 +84,10 @@ const NewCourse = () => {
               handleInput("starttime", e);
             }}
           ></input>
-        </p>
-        <p>
-          Duration:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Duration: </h4>
           <input
             type="text"
             value={course.duration}
@@ -90,9 +95,10 @@ const NewCourse = () => {
               handleInput("duration", e);
             }}
           ></input>
-        </p>
-        <p>
-          Location:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Location: </h4>
           <input
             type="text"
             value={course.location}
@@ -100,9 +106,10 @@ const NewCourse = () => {
               handleInput("location", e);
             }}
           ></input>
-        </p>
-        <p>
-          Summary:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Summary: </h4>
           <input
             type="text"
             value={course.summary}
@@ -110,9 +117,10 @@ const NewCourse = () => {
               handleInput("summary", e);
             }}
           ></input>
-        </p>
-        <p>
-          Price:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Price: </h4>
           <input
             type="text"
             value={course.price}
@@ -120,9 +128,10 @@ const NewCourse = () => {
               handleInput("price", e);
             }}
           ></input>
-        </p>
-        <p>
-          Teacher:{" "}
+        </div>
+
+        <div className="course-details__info">
+          <h4>Teacher: </h4>
           <input
             type="text"
             value={course.teacher}
@@ -130,7 +139,7 @@ const NewCourse = () => {
               handleInput("teacher", e);
             }}
           ></input>
-        </p>
+        </div>
       </div>
       <button className="button" onClick={returnToSearch}>
         Cancel

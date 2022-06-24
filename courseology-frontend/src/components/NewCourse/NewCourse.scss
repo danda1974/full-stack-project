@@ -1,1 +1,56 @@
 @use "../../assets/sass/variables" as *;
+
+h3 {
+  padding: 30px 30px 0 30px;
+  color: $color-violet;
+  display: flex;
+  justify-content: center;
+}
+
+.new-course-card {
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-top: 20px;
+  background-color: $color-grey;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-details__info {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+h4 {
+  color: $color-violet;
+  width: 100px;
+  margin-right: 40px;
+}
+
+input {
+  margin-left: 30px;
+  margin-top: 22px;
+  width: 500px;
+  height: 30px;
+  border: none;
+  resize: none;
+  outline: none;
+  text-align: left;
+  background: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button {
+  color: $color-violet;
+  background-color: $color-grey;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 90px;
+  font-weight: bold;
+  border: none;
+  width: 150px;
+}

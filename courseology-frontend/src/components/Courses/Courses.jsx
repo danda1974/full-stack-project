@@ -46,11 +46,15 @@ const Courses = () => {
     navigator("/course/" + courseId);
   };
 
+  const addCourse = () => {
+    navigator("/newcourse/");
+  };
+
   return (
     <>
       <SearchBar handleInput={handleInput} />
       <div className="courseList">
-        <h4 className="searchResult">Course Results...</h4>
+        <h4 className="searchResult">Course Results...</h4>{" "}
         <div className="coursesSelection">
           {courses.map((course, index) => {
             return (
@@ -79,6 +83,13 @@ const Courses = () => {
           })}
         </div>
       </div>
+      <button
+        onClick={() => {
+          addCourse();
+        }}
+      >
+        add course
+      </button>
     </>
   );
 };
